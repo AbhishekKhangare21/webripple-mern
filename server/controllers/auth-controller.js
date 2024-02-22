@@ -14,7 +14,8 @@ const home = async (req, res) => {
 
 const register = async (req, res) => {
   try {
-    res.status(400).send("controll register");
+    console.log(req.body);
+    res.status(400).send({ massage: req.body });
   } catch (error) {
     res.status(400).send({ msg: "page not found" });
   }
