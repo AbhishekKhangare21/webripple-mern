@@ -1,8 +1,10 @@
 const mongoose = require("mongoose");
 
-const URI = "mongodb://localhost:27017/mern_";
-// mongoose.connect(URI);
+// const URI = "mongodb://localhost:27017/mern_";
 
+const URI = process.env.MONGODB_URI;
+
+// mongoose.connect(URI);
 const connectDb = async () => {
   try {
     await mongoose.connect(URI);
