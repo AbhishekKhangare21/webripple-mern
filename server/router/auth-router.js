@@ -10,6 +10,4 @@ router
   .post(validate(signupSchema), authControllers.register);
 router.route("/login").post(authControllers.login);
 
-// router.route("/login").post(validate(signupSchema), authControllers.login);
-
 module.exports = router;
